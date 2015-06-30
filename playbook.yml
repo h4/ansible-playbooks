@@ -1,0 +1,5 @@
+- hosts: CloudServers
+  remote_user: root
+  roles:
+    - CloudServers
+

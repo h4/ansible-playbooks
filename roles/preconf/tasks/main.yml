@@ -1,0 +1,22 @@
+- name: installing system soft
+  apt: pkg={{ item }}
+  with_items:
+    - zsh
+    - htop
+    - sudo
+    - iftop
+    - tcpdump
+    - wget
+    - vim
+    - tmux
+    - facter
+- name: Add admins
+  user: name='h4' shell='/bin/zsh' groups='sudo'
+- name: Add site users
+  user: name={{ item.user }} shell={{ item.shell }}
+  with_items:
+    - { user: 'kukurund', shell: '/bin/zsh' }
+    - { user: 'oksva', shell: '/bin/zsh' }
+    - { user: 'arwen', shell: '/bin/zsh' }
+    - { user: 'krvchnn', shell: '/bin/zsh' }
+
