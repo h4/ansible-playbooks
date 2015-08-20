@@ -1,4 +1,3 @@
 # Cloud servers 
 [CloudServers]
 panaka  ansible_ssh_host=panaka.h404.ru
-

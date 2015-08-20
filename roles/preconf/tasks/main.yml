@@ -19,4 +19,3 @@
     - { user: 'oksva', shell: '/bin/zsh' }
     - { user: 'arwen', shell: '/bin/zsh' }
     - { user: 'krvchnn', shell: '/bin/zsh' }
-
