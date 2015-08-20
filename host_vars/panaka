@@ -1,0 +1,8 @@
+ssh_admins:
+  - { user: 'h4', shell: '/bin/zsh', key: "{{ lookup('file', 'public_keys/h4.pub') }}" }
+
+ssh_clients:
+  - { user: 'kukurund', shell: '/bin/zsh' }
+  - { user: 'oksva', shell: '/bin/zsh' }
+  - { user: 'arwen', shell: '/bin/zsh' }
+  - { user: 'krvchnn', shell: '/bin/zsh' }

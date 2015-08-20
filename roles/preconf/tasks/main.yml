@@ -11,11 +11,11 @@
     - tmux
     - facter
 - name: Add admins
-  user: name='h4' shell='/bin/zsh' groups='sudo'
+  user: name={{ item.user }} shell={{ item.shell }} groups="sudo"
+  with_items:
+    - "{{ ssh_admins }}"
 - name: Add site users
   user: name={{ item.user }} shell={{ item.shell }}
   with_items:
-    - { user: 'kukurund', shell: '/bin/zsh' }
-    - { user: 'oksva', shell: '/bin/zsh' }
-    - { user: 'arwen', shell: '/bin/zsh' }
-    - { user: 'krvchnn', shell: '/bin/zsh' }
+    - "{{ ssh_clients }}"
+- include: keys.yml
